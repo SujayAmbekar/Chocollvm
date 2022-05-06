@@ -1,0 +1,125 @@
+{
+  "kind": "Program",
+  "declarations": [
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "a"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "int"
+        }
+      },
+      "value": {
+        "kind": "IntegerLiteral",
+        "inferredType": {
+          "kind": "ClassValueType",
+          "className": "int"
+        },
+        "value": 1
+      }
+    },
+    {
+      "kind": "VarDef",
+      "var": {
+        "kind": "TypedVar",
+        "identifier": {
+          "kind": "Identifier",
+          "name": "b"
+        },
+        "type": {
+          "kind": "ClassType",
+          "className": "str"
+        }
+      },
+      "value": {
+        "kind": "StringLiteral",
+        "inferredType": {
+          "kind": "ClassValueType",
+          "className": "str"
+        },
+        "value": "Hello"
+      }
+    }
+  ],
+  "statements": [
+    {
+      "kind": "AssignStmt",
+      "targets": [
+        {
+          "kind": "Identifier",
+          "inferredType": {
+            "kind": "ClassValueType",
+            "className": "int"
+          },
+          "name": "a"
+        }
+      ],
+      "value": {
+        "kind": "IntegerLiteral",
+        "inferredType": {
+          "kind": "ClassValueType",
+          "className": "int"
+        },
+        "value": 3
+      }
+    },
+    {
+      "kind": "ExprStmt",
+      "expr": {
+        "kind": "CallExpr",
+        "inferredType": {
+          "kind": "ClassValueType",
+          "className": "int"
+        },
+        "function": {
+          "kind": "Identifier",
+          "inferredType": {
+            "kind": "FuncType",
+            "parameters": [
+              {
+                "kind": "ClassValueType",
+                "className": "str"
+              },
+              {
+                "kind": "ClassValueType",
+                "className": "object"
+              }
+            ],
+            "returnType": {
+              "kind": "ClassValueType",
+              "className": "int"
+            }
+          },
+          "name": "printf"
+        },
+        "args": [
+          {
+            "kind": "StringLiteral",
+            "inferredType": {
+              "kind": "ClassValueType",
+              "className": "str"
+            },
+            "value": "%s"
+          },
+          {
+            "kind": "Identifier",
+            "inferredType": {
+              "kind": "ClassValueType",
+              "className": "str"
+            },
+            "name": "b"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": {
+    "kind": "Errors",
+    "errors": []
+  }
+}
